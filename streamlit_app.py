@@ -17,7 +17,7 @@ import streamlit as st
 from dataclasses import dataclass, field
 import uuid
 
-st.set_page_config(page_title="To-do list", page_icon=":memo:")
+st.set_page_config(page_title="Tasques Pere", page_icon=":memo:")
 
 # Declare alias for st.session_state, just for convenience.
 state = st.session_state
@@ -26,7 +26,7 @@ state = st.session_state
 @dataclass
 class Todo:
     text: str
-    is_done = False
+    is_done: bool = False
     uid: uuid.UUID = field(default_factory=uuid.uuid4)
 
 
@@ -35,6 +35,7 @@ if "todos" not in state:
         Todo(text="Buy milk"),
         Todo(text="Wash dishes"),
         Todo(text="Write a novel"),
+        Todo(text="Presentar la memòria", is_done=True),
     ]
 
 
@@ -43,8 +44,9 @@ def remove_todo(i):
 
 
 def add_todo():
-    state.todos.append(Todo(text=state.new_item_text))
+    state.todos.append(Todo(text=state.new_item_text, is_done=state.new_item_done))
     state.new_item_text = ""
+    state.new_item_done = False
 
 
 def check_todo(i, new_value):
@@ -79,6 +81,12 @@ with st.form(key="new_item_form", border=False):
             icon=":material/add:",
             on_click=add_todo,
         )
+
+    st.checkbox(
+        "Afegir com completada",
+        value=False,
+        key="new_item_done",
+    )
 
 if state.todos:
     with st.container(gap=None, border=True):
