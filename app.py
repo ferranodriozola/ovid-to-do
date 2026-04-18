@@ -32,11 +32,26 @@ class Todo:
 
 if "todos" not in state:
     state.todos = [
-        Todo(text="Buy milk"),
-        Todo(text="Wash dishes"),
-        Todo(text="Write a novel"),
-        Todo(text="Presentar la memòria", is_done=True),
-    ]
+        Todo(text="Transcriure Puteolanus"),
+        Todo(text="*Dedicatòria", is_done=True),
+        Todo(text="*Vida"),
+        Todo(text="*Índex"),
+        Todo(text="Omplir excel Puteolanus"),
+        Todo(text="Corregir xml Puteolanus"),
+        Todo(text="Enviar a Pere Comitibus i Puteolanus + qüestions"),
+        Todo(text="*Comitibus: què ha canviat"),
+        Todo(text="*mirar correu i whatsapp que li havia enviat"),
+        Todo(text="Creador xml personatges"),
+        Todo(text="*csv persones drive"),
+        Todo(text="*csv llocs drive"),
+        Todo(text="*db drive (occupation)"),
+        Todo(text="*db drive (certainty)"),
+        Todo(text="*gestionar db en línea amb el generador xml normal en local:"),
+        Todo(text="*db drive (languages) (!!)"),
+        Todo(text="*db drive (city) (!!)"),
+        Todo(text="*db drive (country) (!!)"),
+        Todo(text="*fer python persones"),
+        Todo(text="*fer python llocs"),    ]
 
 
 def remove_todo(i):
