@@ -29,6 +29,7 @@ class Todo:
     is_done: bool = False
     uid: uuid.UUID = field(default_factory=uuid.uuid4)
 
+
 text = """
 Transcriure Puteolanus
 *Dedicatòria
@@ -58,8 +59,6 @@ Creador xml personatges
 def converteix_text_a_todos(text: str) -> list[Todo]:
     todos = []
 
-    # Elimina només els salts inicial/final del bloc multilínia,
-    # però preserva les línies en blanc internes com a tasques.
     for raw_line in text.strip("\n").splitlines():
         line = raw_line.strip()
         is_done = line.startswith("(X) ")
