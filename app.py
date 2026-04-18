@@ -31,16 +31,16 @@ class Todo:
 
 text = """
 Transcriure Puteolanus
-(X) *Dedicatòria
+*Dedicatòria
 *Vida
 *Índex
- 
+
 Omplir excel Puteolanus
 Corregir xml Puteolanus
 Enviar a Pere Comitibus i Puteolanus + qüestions
 *Comitibus: què ha canviat
 *mirar correu i whatsapp que li havia enviat
- 
+
 Creador xml personatges
 *csv persones drive
 *csv llocs drive
