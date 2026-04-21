@@ -13,6 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
+#cd /Users/macbookpro/Dropbox/FERRAN/Portàtil/FEINA/2025/Beca_col·laboració/*PROGRAMACIÓ/ovid-to-do
+#python3 -m streamlit run app.py
+
+
 import streamlit as st
 from dataclasses import dataclass, field
 import uuid
@@ -31,10 +36,6 @@ class Todo:
 
 
 text = """
-(X)Omplir excel Puteolanus
-Generar xml Puteolanus
-Corregir manualment xml Puteolanus
-
 Creador xml personatges
 *csv persones drive
 *csv llocs drive
@@ -46,6 +47,8 @@ Creador xml personatges
 *db drive (country) (!!)
 *fer python persones
 *fer python llocs
+
+UI generador xml?
 """
 
 
